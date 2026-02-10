@@ -28,7 +28,7 @@
 }
 
 html {
-    --bg-color: rgb(251, 162, 180);
+    --bg-color: rgb(236, 165, 179);
     --fg-color: white;
     --text-color: black;
     --main-font: 'Pixel Operator', sans-serif;
@@ -43,6 +43,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-size: 1.15rem;
 }
 
 #hero {
@@ -116,13 +117,29 @@ h1 {
     min-width: 15ch;
     width: 15%;
     position: sticky;
-    top: 0px;
+    top: 35px;
     height: fit-content;
-    padding: 10px;
+}
+
+.boxed {
+    padding: 15px;
+    background-color: var(--fg-color);
+    border-radius: 7px;
+    outline: 2px dashed var(--bg-color);
+    outline-offset: -5px;
+}
+
+a {
+    color: var(--bg-color);
+    font-weight: bold;
 }
 
 aside p {
     font-size: 0.8rem;
+    padding-top: 10px;
+    margin: 0;
+    bottom: 5px;
+    text-align: center;
 }
 
 aside nav .nav-item {
@@ -132,7 +149,7 @@ aside nav .nav-item {
     font-size: 1.25rem;
 }
 
-aside nav .nav-item:hover {
+a:hover {
     opacity: 80%;
 }
 
@@ -140,4 +157,17 @@ aside nav .nav-item:hover {
 .page-container .content-container {
     margin-left: 20px;
     padding: 0 0 20px 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-block h2 {
+    color: var(--bg-color);
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
 }
