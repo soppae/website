@@ -1,0 +1,143 @@
+/* Daydream 3: https://www.dafont.com/daydream-3.font (converted with transfonter) */
+@font-face {
+    font-family: 'Daydream';
+    src: url(resources/DaydreamRegular.woff2);
+}
+
+/* Pixel Operator: https://www.dafont.com/pixel-operator.font */
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url(resources/pixel_operator/PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url(resources/pixel_operator/PixelOperator-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Pixel Operator Mono';
+    src: url(resources/pixel_operator/PixelOperatorMono.ttf);
+}
+
+@font-face {
+    font-family: 'Pixel Operator Mono';
+    src: url(resources/pixel_operator/PixelOperatorMono-Bold.ttf);
+    font-weight: bold;
+}
+
+html {
+    --bg-color: rgb(251, 162, 180);
+    --fg-color: white;
+    --text-color: black;
+    --main-font: 'Pixel Operator', sans-serif;
+    --mono-font: 'Pixel Operator Mono', monospace;
+    --title-font: 'Daydream', serif;
+
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#hero {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#hero
+h1 {
+    font-family: var(--title-font);
+    font-size: 69px;
+    color: var(--fg-color);
+    margin-bottom: 10px;
+}
+
+.marquee {
+    /* background-color: white; */
+    color: var(--fg-color);
+    width: 100%;
+    font-family: var(--mono-font);
+}
+
+.marquee {
+  --gap: 1ch;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: left;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+  margin: 0;
+  padding: 0;
+}
+
+.marquee-content li {
+    list-style: none;
+    font-size: 1.15rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation-play-state: paused !important;
+  }
+}
+
+.page-container {
+    display: flex;
+    
+    max-width: 800px;
+    margin: auto;
+}
+
+.page-container aside {
+    min-width: 15ch;
+    width: 15%;
+    position: sticky;
+    top: 0px;
+    height: fit-content;
+    padding: 10px;
+}
+
+aside p {
+    font-size: 0.8rem;
+}
+
+aside nav .nav-item {
+    text-align: right;
+    padding: 5px;
+    margin: 0 0 5px 5px;
+    font-size: 1.25rem;
+}
+
+aside nav .nav-item:hover {
+    opacity: 80%;
+}
+
+
+.page-container .content-container {
+    margin-left: 20px;
+    padding: 0 0 20px 20px;
+}
