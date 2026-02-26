@@ -27,11 +27,17 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'Dot Gothic 16';
+    src: url(resources/DotGothic16-Regular.ttf);
+}
+
 html {
     --bg-color: rgb(236, 165, 179);
     --fg-color: white;
     --text-color: black;
     --main-font: 'Pixel Operator', sans-serif;
+    --japanese-font: 'Dot Gothic 16', sans-serif;
     --mono-font: 'Pixel Operator Mono', monospace;
     --title-font: 'Daydream', serif;
 
@@ -109,7 +115,6 @@ body {
 
 .page-container {
     display: flex;
-
     max-width: 800px;
     margin: auto;
 }
@@ -159,6 +164,7 @@ a:hover {
 .page-container .content-container {
     margin-left: 20px;
     padding: 0 0 20px 20px;
+    min-width: 500px;
 }
 
 .content-container {
@@ -199,4 +205,9 @@ a:hover {
     height: 1.8rem;
     float: left;
     fill: var(--bg-color);
+}
+
+.jp-text {
+    font-family: var(--japanese-font);
+    font-size: 0.8rem;    
 }
