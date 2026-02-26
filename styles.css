@@ -51,12 +51,12 @@ body {
     padding-bottom: 20px;
 }
 
-#hero
-h1 {
+#hero h1 {
     font-family: var(--title-font);
     font-size: 69px;
     color: var(--fg-color);
     margin-bottom: 10px;
+    text-shadow: 5px 5px 15px rgba(0,0,0,0.075);
 }
 
 .marquee {
@@ -67,23 +67,23 @@ h1 {
 }
 
 .marquee {
-  --gap: 1ch;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  gap: var(--gap);
+    --gap: 1ch;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
 }
 
 .marquee-content {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: left;
-  gap: var(--gap);
-  min-width: 100%;
-  animation: scroll 20s linear infinite;
-  margin: 0;
-  padding: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: left;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+    margin: 0;
+    padding: 0;
 }
 
 .marquee-content li {
@@ -92,23 +92,24 @@ h1 {
 }
 
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-content {
-    animation-play-state: paused !important;
-  }
+    .marquee-content {
+        animation-play-state: paused !important;
+    }
 }
 
 .page-container {
     display: flex;
-    
+
     max-width: 800px;
     margin: auto;
 }
@@ -127,6 +128,7 @@ h1 {
     border-radius: 7px;
     outline: 2px dashed var(--bg-color);
     outline-offset: -5px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.075);
 }
 
 a {
@@ -170,4 +172,31 @@ a:hover {
     font-weight: bold;
     font-size: 2rem;
     margin: 0;
+}
+
+#about-cutout {
+    width: 300px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+#about-cutout-container {
+    width: fit-content;
+    float: right;
+    rotate: 5deg;
+    transform: translate(40px, -30px);
+    margin: 0;
+}
+
+.social-links-container {
+    display: flex;
+    gap: 2px;
+}
+
+.social-links-container div {}
+
+.social-icon {
+    height: 1.8rem;
+    float: left;
+    fill: var(--bg-color);
 }
