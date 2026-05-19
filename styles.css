@@ -254,3 +254,10 @@ a {
 .blog-post:hover {
     border-style: solid;
 }
+
+.choice-organizer {
+    display: flex;
+    gap: 5px;
+    width: 80%;
+    
+}
