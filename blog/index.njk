@@ -18,6 +18,8 @@ title: blog
                 <p class="blog-list-description">{{post.data.description}}</p>
                 
             </li>
+        {% else %}
+            <li class="blog-list-post-container">no posts...</li>
         {% endfor %}
     </ul>
 </div>
