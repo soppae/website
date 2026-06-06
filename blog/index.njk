@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: blog
+---
+<div class="content-block boxed">
+    <h2>blog</h2>
+    <ul>
+        {% for post in collections.blog %}
+            <li class="blog-list-post-container">
+                <a href="{{post.url}}" class="blog-list-title">{{post.data.title}}</a> 
+                <div>
+                    <p class="blog-list-date">{{post.data.date | enDate}} ⛧ 
+                        {% for tag in post.data.tags %}
+                            <a href="#" class="blog-list-tag">{{tag}}</a>   
+                        {% endfor %}</p>
+
+                </div>
+                <p class="blog-list-description">{{post.data.description}}</p>
+                
+            </li>
+        {% endfor %}
+    </ul>
+</div>

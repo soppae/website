@@ -1,35 +1,35 @@
 /* Daydream 3: https://www.dafont.com/daydream-3.font (converted with transfonter) */
 @font-face {
     font-family: 'Daydream';
-    src: url(resources/DaydreamRegular.woff2);
+    src: url(/resources/DaydreamRegular.woff2);
 }
 
 /* Pixel Operator: https://www.dafont.com/pixel-operator.font */
 @font-face {
     font-family: 'Pixel Operator';
-    src: url(resources/pixel_operator/PixelOperator.ttf);
+    src: url(/resources/pixel_operator/PixelOperator.ttf);
 }
 
 @font-face {
     font-family: 'Pixel Operator';
-    src: url(resources/pixel_operator/PixelOperator-Bold.ttf);
+    src: url(/resources/pixel_operator/PixelOperator-Bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Pixel Operator Mono';
-    src: url(resources/pixel_operator/PixelOperatorMono.ttf);
+    src: url(/resources/pixel_operator/PixelOperatorMono.ttf);
 }
 
 @font-face {
     font-family: 'Pixel Operator Mono';
-    src: url(resources/pixel_operator/PixelOperatorMono-Bold.ttf);
+    src: url(/resources/pixel_operator/PixelOperatorMono-Bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Dot Gothic 16';
-    src: url(resources/DotGothic16-Regular.ttf);
+    src: url(/resources/DotGothic16-Regular.ttf);
 }
 
 html {
@@ -194,6 +194,15 @@ a:hover {
     margin: 0;
 }
 
+#about-cutout-container p {
+    padding: 0;
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    color: var(--bg-color);
+}
+
 .social-links-container {
     display: flex;
     gap: 2px;
@@ -260,4 +269,45 @@ a {
     gap: 5px;
     width: 80%;
     
+}
+
+details>summary::marker {
+    content: '';
+
+}
+
+.summary-arrow {
+    color: var(--bg-color);
+    height: 1rem;
+    float: right;
+    position: absolute;
+    right: 10px;
+}
+
+.blog-list-post-container {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.blog-list-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.blog-list-date {
+    font-size: 0.8em;
+    /* font-style: italic; */
+    opacity: 0.8;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-list-description {
+    padding: 0;
+    margin: 0;
+}
+
+.content-block 
+img {
+    max-width: 100%;
 }
