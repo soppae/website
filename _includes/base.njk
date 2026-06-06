@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bundle.css"> 
+    <style>{% include "styles.css" %}</style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <!-- fonts -->
+    <link rel="preload" href="/resources/DaydreamRegular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <title>{{ title | safe }}</title>
+</head>
+
+<body>
+    <div id="header">
+        <!-- large name + tagline -->
+        <div id="hero">
+            <h1 id="hero-text">soppae</h1>
+            <!-- scrolling marquee -->
+            <div class="marquee">
+                <ul class="marquee-content">
+                    {% for line in marquee.text %}
+                        <li>{{line | safe + " ⛧"}}</li>
+                    {% endfor %}             
+                </ul>
+
+                <ul class="marquee-content">
+                    {% for line in marquee.text %}
+                        <li>{{line | safe + " ⛧"}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="page-container">
+        <!-- left sticky nav/sidebar -->
+        <aside class="boxed">
+            <nav>
+                <div class="nav-item"><a href="/">home</a></div>
+                <div class="nav-item"><a href="/blog">blog</a></div>
+                <div class="nav-item"><a href="/projects">projects</a></div>
+            </nav>
+
+            <div>
+                <p>no generative ai used</p>
+            </div>
+        </aside>
+
+        <!-- main content -->
+        <main class="content-container">
+           {{ content | safe }} 
+        </main>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
